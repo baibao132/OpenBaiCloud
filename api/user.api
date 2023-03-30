@@ -1,0 +1,118 @@
+type (
+	LoginReq {
+		Username string `json:"username"`
+		Password string `json:"password"`
+	}
+
+	LoginReply {
+		Name         string `json:"name"`
+		AccessToken  string `json:"accessToken"`
+		RefreshToken string `json:"refreshAfter"`
+	}
+
+	DetailReq {
+		AccessToken string `header:"accessToken"`
+	}
+
+	Detail {
+		Name string   `json:"Name"`
+		Type string   `json:"Type"`
+		Size float64  `json:"Size"`
+		Id   string   `json:"Id"`
+		Path []Detail `json:"Path"`
+	}
+
+	DetailReply {
+		File []Detail `json:"File"`
+	}
+	DataReq {
+		AccessToken string `header:"accessToken"`
+		Id          string `from:"Id"`
+	}
+
+	RegisterReq {
+		Username   string `json:"username"`
+		Password   string `json:"password"`
+		VerifyId   string `json:"VerifyId"`
+		VerifyCode string `json:"VerifyCode"`
+	}
+
+	VerifyReq {
+		Mail string `json:"Mail"`
+	}
+
+	VerifyReply {
+		VerifyId string `json:"VerifyId"`
+	}
+
+	CreateReq {
+		AccessToken string `header:"accessToken"`
+		Id          string `path:"Id"`
+	}
+
+	ShareReply {
+		Url string `json:"url"`
+	}
+
+	ShareReq {
+		AccessToken string `header:"accessToken"`
+		Password    string `json:"password"`
+		Id          string `path:"Id"`
+	}
+
+	DataReply {
+		//data	[]byte
+	}
+
+	CreateDataReq {
+		AccessToken string `header:"accessToken"`
+		Name        string `json:"Name"`
+		Hash        string `json:"hash"`
+		CloudPathId string `form:"CloudPathId"` //云盘路径id
+		Size        []int  `json:"Size"`
+	}
+
+	CreateDataReply {
+		DataId string `json:"DataId"`
+	}
+
+	UpleadReq {
+		AccessToken string `header:"accessToken"`
+		DataId      string `form:"DataId"`
+		//data	[]byte
+	}
+	RefreshReq {
+		RefreshToken string `from:"RefreshToken"`
+	}
+)
+
+service OpenBaiCloud {
+	@handler login
+	post /user/login (LoginReq) returns (LoginReply)
+	@handler Refresh
+	post /user/Refresh (DetailReq) returns (LoginReply)
+	@handler File
+	get /File/detail (DetailReq) returns (DetailReply)
+	@handler Photo
+	get /Photo/detail (DetailReq) returns (DetailReply)
+	@handler Video
+	get /Video/detail (DetailReq) returns (DetailReply)
+	@handler FileData
+	get /File/Data (DataReq) returns (DataReply)
+	@handler register
+	post /user/register (RegisterReq)
+	@handler verifyCode
+	post /user/verifyCode (VerifyReq) returns (VerifyReply)
+	@handler FileDelete
+	post /File/Delete (DataReq)
+	@handler CreateDir
+	post /Dir/Create (DataReq)
+	@handler CreateShare
+	post /Share/Create (ShareReq) returns (ShareReply)
+	@handler DeleteShare
+	post /Share/Delete (DataReq)
+	@handler CreateUpleadFile
+	post /Uplead/CreateFile (CreateDataReq) returns (CreateDataReply)
+	@handler UpleadFile
+	post /Uplead/File (UpleadReq)
+}

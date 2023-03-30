@@ -1,0 +1,10 @@
+Name: OpenBaiCloud
+Host: 0.0.0.0
+Port: 8888
+Mysql:
+  DataSource: BaiCloud:jetN7t3MwSjAiMkb@tcp(baibaoblog.cn:3306)/BaiCloud?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+CacheRedis:
+  - Host: 180.122.103.130:6379
+    Pass: z3481133
+    Type: node
+DataPath: D:\centos
