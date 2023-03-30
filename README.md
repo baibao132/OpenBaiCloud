@@ -1,4 +1,5 @@
 <div align="center">
+<img align="center" src="https://github.com/baibao132/OpenBaiCloud/blob/master/logo1.png">
 <h1>OpenBaiCloud</h1>
 
 使用Go开发的Web云盘API项目
