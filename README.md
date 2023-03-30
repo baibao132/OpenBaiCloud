@@ -9,7 +9,6 @@
 
 请注意该项目遵循开源协议  
 
-
 <a href="https://github.com/baibao132/SquareMinecraftLauncherCore/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/baibao132/OpenBaiCloud"></a>
 <a href="https://github.com/baibao132/SquareMinecraftLauncherCore/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/baibao132/baibao132/OpenBaiCloud"></a>
 <a href="https://github.com/baibao132/SquareMinecraftLauncherCore/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/baibao132/OpenBaiCloud"></a>
