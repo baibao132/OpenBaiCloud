@@ -1,22 +1,15 @@
-<div align="center">
+# OpenBaiCloud
+<p align="center">
 <img align="center" src="https://github.com/baibao132/OpenBaiCloud/blob/master/logo1.png">
-<h1>OpenBaiCloud</h1>
-
-使用Go开发的Web云盘API项目
-
-此项目开源目的用于学习以及安全排查
-
-目前还处于开发状态，已完成进度20%
-
-作者：BaiBao
-
-请注意该项目遵循开源协议  
-
+</p>
+ <p align="center">OpenBaiCloud使用Go开发的Web云盘API项目，目前还处于开发状态，到现在为止已完成进度20%</p>
+ <div align="center">
 <a href="https://github.com/baibao132/OpenBaiCloud/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/baibao132/OpenBaiCloud"></a>
 <a href="https://github.com/baibao132/OpenBaiCloud/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/baibao132/OpenBaiCloud"></a>
 <a href="https://github.com/baibao132/OpenBaiCloud/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/baibao132/OpenBaiCloud"></a>
 <a href="https://github.com/baibao132/OpenBaiCloud/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/baibao132/OpenBaiCloud"></a>
 </div>
+
 
 
 
